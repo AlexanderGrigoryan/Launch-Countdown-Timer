@@ -1,0 +1,96 @@
+.timer__box {
+    width: 70px;
+    height: 66.27px;
+    border-radius: 4px;
+    background: #343650;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.timer__circle {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #191A23;
+}
+
+.timer__circle:first-child{
+    margin-left: -3px;
+}
+
+.timer__circle:last-child{
+    margin-right: -3px;
+}
+
+.timer__time {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 71px;
+    letter-spacing: -1.08px;
+    color: #FB5E84;
+}
+
+.timer__line {
+    width: 70px;
+    height: 0.47px;
+    background-color: rgba(0, 0, 0, 0.25);
+    position: absolute;
+    top: 50%;
+}
+
+.timer__name {
+    font-size: 7px;
+    font-weight: 700;
+    line-height: 9px;
+    letter-spacing: 2.96px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 9px;
+    color: #8385A9;
+}
+
+@media screen and (min-width: 1024px) {
+    .timer__box {
+        width: 148px;
+        height: 150px;
+        border-radius: 8px;
+    }
+
+    .timer__circle {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #191A23;
+    }
+
+    .timer__circle:first-child{
+        margin-left: -6px;
+    }
+    
+    .timer__circle:last-child{
+        margin-right: -6px;
+    }
+
+    .timer__line {
+        width: 148px;
+        height: 1px;
+    }
+
+    .timer__time {
+        font-size: 80px;
+        line-height: 71px;
+        letter-spacing: 71px;
+        letter-spacing: -2.4px;
+        color: #FB5E84;
+    }
+
+    .timer__name {
+        font-size: 14px;
+        line-height: 18.52px;
+        letter-spacing: 5.92px;
+        margin-top: 16px;
+    }
+}

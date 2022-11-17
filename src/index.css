@@ -1,13 +1,39 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap');
+
+*{
+  margin: 0; 
+  padding:0;
+  border: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Red Hat Text', sans-serif;
+  background: url(./img/bg-stars.svg), linear-gradient(180deg, #1D1E28 0.12%, #261C2D 94.84%, #261A2D 100%) ;
+  background-repeat: no-repeat;
+  height: 100vh;
 }
+
+.container {
+  margin: 0 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer__container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 55px;
+  column-gap: 16px;
+}
+
+@media screen and (min-width: 1024px) {
+  .timer__container {
+    margin-top: 104px;
+    column-gap: 32px;
+  }
+}
+
+

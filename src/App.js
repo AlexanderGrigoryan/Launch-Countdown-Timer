@@ -1,23 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+import Title from './Title/Title'
+import Timer from './Timer/Timer'
+import Footer from './Footer/Footer'
+import { useState, useEffect } from 'react';
+
+const deadline = new Date("March, 18, 2023");
+const startTime = deadline - new Date()
 
 function App() {
+  const [time, setTime] = useState(startTime);
+  
+  const days = (Math.floor(time / (1000 * 60 * 60 * 24)));
+  const hours = (Math.floor((time / (1000 * 60 * 60)) % 24));
+  const minutes = (Math.floor((time / 1000 / 60) % 60));
+  const seconds = (Math.floor((time / 1000) % 60));
+  
+  useEffect(() => {
+    const interval = setInterval(() => setTime(time - 1000), 1000);
+    return () => clearInterval(interval);
+
+  }, [time]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container">
+        <Title />
+          <div className="timer__container">
+            <Timer text="Days">{days}</Timer> 
+            <Timer text="Hours" >{hours}</Timer>
+            <Timer text="Minutes">{minutes}</Timer>
+            <Timer text="Seconds">{seconds}</Timer>
+          </div>
+      </div>
+      <Footer />
     </div>
   );
 }

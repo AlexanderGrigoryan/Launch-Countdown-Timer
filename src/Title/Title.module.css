@@ -1,0 +1,19 @@
+.title__text {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 6.14px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 142px;
+    color: #FFFFFF;
+}
+
+@media screen and (min-width:1024px) {
+    .title__text {
+        font-size: 22px;
+        line-height: 29px;
+        letter-spacing: 7.5px;
+        margin-top: 132px;
+    }
+}
